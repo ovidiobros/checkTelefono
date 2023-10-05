@@ -1,23 +1,30 @@
 # Check Telefono
 
-Ricevuto come parametro un vettore di string, ritornare al chiamante la prima stringa che assomiglia molto ad un numero di telefono cellulare italiano ovvero:
-- che inizia con +39 (esattamente lungo  13)
-- oppure con 0039 (esattamente lungo 14)
-- oppure con un 3 (esattamente lungo 10)
+*alli'inizio creiamo in for per fare scorrere tutto l'array* 
 
-Se il numero non viene trovato, ritornare stringa vuota ""
+''' for (int i = 0; i < input.Length; i++)
+        {
 
-Ad esempio.
-Se arriva "05417373", "3367726712",  "778823"
-Tornare "3367726712"
+        }
+        '''
 
-Se arriva "33677267", "33677232",  "778823"
-Tornare ""
+        *all'interno del for ci mettiamo un if per controllare i caratteri dell'array di string*
 
-Se arriva "", "05417723",  "+391231231234"
-Tornare "+391231231234"
+        ''' 
+        if((telefono.StartsWith("+39") && telefono.Length == 13) ||
+                (telefono.StartsWith("0039") && telefono.Length == 14) ||
+                (telefono.StartsWith("3") && telefono.Length == 10) ){
 
-Se arriva "3", "05417723",  "00391231231230"
-Tornare ""
+        }
+        '''
+        *all'interno del if abbiamo messo come condinzione la stringa tellefono nella posizione in cui si trovva array input , poi abbiamo messo un StartWirh("") per controllare la possizione dei caratteri se corrispondo con la condizione che abbiamo messo , poi le || servono a fare piu controlli senza usare altri if e ottimizza il codice*
 
-etc
+        '''
+        return telefono;
+        '''
+* abbiamo messo return del telefono per restituire la variabile string se le condizioni sono state rispettate*
+
+''' return ""; '''
+*se le condizioni non state rispettate ritorna una niente*
+
+

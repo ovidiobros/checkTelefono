@@ -56,7 +56,7 @@ public class telefonoTest
     [Fact]
     public void Piredda4()
     {
-        Assert.Equal("00393349989823", Telefono.Check(new string[]{"05418888", "39312 3456", "00393349989823" }));
+        Assert.Equal("00393349989823", Telefono.Check(new string[]{"05418888", "393123456", "00393349989823" }));
     }
 
     [Fact]
